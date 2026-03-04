@@ -2,7 +2,7 @@
 
 OS_RELEASE=$(grep '^PRETTY_NAME=' /etc/os-release | cut -d'=' -f2 | tr -d '"')
 
-echo -e "> Welcome, miniscandal! ⚝\n" | pv -qL 10
+echo -e "> Welcome, miniscandal! ⚝\n" | pv -qL 15
 echo -e "> User: $USER | OS Release: $OS_RELEASE ☾\n"
 echo -e -n "> No Anime No Life ꉂ(˵˃ ᗜ ˂˵) - No Code No Life ＼_ﾍ(ω｀●)\n\n"
 

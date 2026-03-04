@@ -15,7 +15,7 @@ Set-PSReadLineOption -PredictionViewStyle ListView
 $MESSAGE = "> Welcome, miniscandal! ⚝`n"
 foreach ($char in $MESSAGE.ToCharArray()) {
     Write-Host -NoNewline $char
-    Start-Sleep -Milliseconds 50
+    Start-Sleep -Milliseconds 35
 }
 Write-Host ""
 

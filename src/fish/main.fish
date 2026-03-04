@@ -6,7 +6,7 @@ set THEME_FILE ~/miniscandal/profile/src/assets/oh-my-posh/themes/catppuccin.omp
 oh-my-posh init fish --config $THEME_FILE | source
 
 echo -e "\e[34m \n𓆝 𓆟 𓆞 𓆝 𓆛 𓆝 𓆟 𓆞 𓆝 𓆛 𓆝 𓆟 𓆞 𓆝 𓆛 𓆝 𓆟 \e[0m"
-echo -e -n "\n> fish" | pv -qL 10
+echo -e -n "\n> fish" | pv -qL 20
 printf "\033[?25l"
 printf "\n\n"
 printf "\033[A"

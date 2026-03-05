@@ -41,14 +41,20 @@ eval "$(oh-my-posh init bash --config $THEME_FILE)"
 
 # Aliases
 if command -v eza > /dev/null 2>&1; then
-  # Redefining ls allows standard flags (-a, -l) to be passed to eza
   alias ls='eza --icons --group-directories-first'
 
-  # Provides a tree view limited to 2 levels
-  alias tree='eza --tree --icons --level=2'
-else
-  # Fallback: ensures 'ls' remains functional and colored
-  alias ls='ls --color=auto'
+  alias scb='xclip -selection clipboard'
+
+  # alias tree='eza --tree --icons --level=2'
+
+  tree() {
+    if [[ "$1" == "-m" ]]; then
+      shift
+      LC_ALL=C eza --tree --color=never --level=2 "$@"
+    else
+      eza --tree --icons --level=2 "$@"
+    fi
+  }
 fi
 
 export OLLAMA_HOST=$(ip route show default | awk '{print $3}'):11434
